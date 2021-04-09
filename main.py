@@ -8,15 +8,6 @@ from selenium.common.exceptions import NoSuchElementException
 import keyboard
 
 
-def xpath_exists(self, url):
-    browser = self.browser
-    try:
-        browser.find_element_by_xpath(url)
-        exist = True
-    except NoSuchElementException:
-        exist = False
-    return exist
-
 def _translate_text(text):
     while True:
         keyboard.wait('Ctrl + Q')
